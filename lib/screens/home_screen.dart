@@ -15,11 +15,15 @@ class _HomeScreenState extends State<HomeScreen> {
   Offset? _popupPosition;
   OverlayEntry? _toastEntry;
 
-  final String _sampleText = '''Misspellings and grammatical errors can effect your credibility. The same goes for misused commas, and other types of punctuation. Not only will Grammarly underline these issues in red, it will also showed you how to correctly write the sentence.
+  final String _sampleText =
+      '''Misspellings and grammatical errors can effect your credibility. The same goes for misused commas, and other types of punctuation. Not only will Grammarly underline these issues in red, it will also showed you how to correctly write the sentence.
 
 Underlines that are blue indicate that Grammarly has spotted a sentence that is unnecessarily wordy. You'll find suggestions that can possibly help you revise a wordy sentence in an effortless manner.''';
 
-  void _onSelectionChanged(TextSelection selection, SelectionChangedCause? cause) {
+  void _onSelectionChanged(
+    TextSelection selection,
+    SelectionChangedCause? cause,
+  ) {
     if (selection.baseOffset != selection.extentOffset) {
       setState(() {
         _selection = selection;
@@ -48,9 +52,8 @@ Underlines that are blue indicate that Grammarly has spotted a sentence that is 
       context: context,
       isScrollControlled: true,
       backgroundColor: Colors.transparent,
-      builder: (context) => ActionBottomSheetWidget(
-        onActionSelected: _showToast,
-      ),
+      builder: (context) =>
+          ActionBottomSheetWidget(onActionSelected: _showToast),
     );
   }
 
