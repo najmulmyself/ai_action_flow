@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'core/theme/app_theme.dart';
-import 'features/text_editor/screens/text_editor_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'screens/home_screen.dart';
 
 void main() {
-  runApp(const ProviderScope(child: MyApp()));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,8 +14,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Action Flow',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.lightTheme,
-      home: const TextEditorScreen(),
+      theme: ThemeData(
+        useMaterial3: true,
+        scaffoldBackgroundColor: const Color(0xFFF8F9FA),
+        textTheme: GoogleFonts.interTextTheme(),
+      ),
+      home: const HomeScreen(),
     );
   }
 }
