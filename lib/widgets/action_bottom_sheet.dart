@@ -4,10 +4,7 @@ import 'package:flutter/cupertino.dart';
 class ActionBottomSheetWidget extends StatefulWidget {
   final Function(String) onActionSelected;
 
-  const ActionBottomSheetWidget({
-    super.key,
-    required this.onActionSelected,
-  });
+  const ActionBottomSheetWidget({super.key, required this.onActionSelected});
 
   @override
   State<ActionBottomSheetWidget> createState() =>
@@ -60,7 +57,10 @@ class _ActionBottomSheetWidgetState extends State<ActionBottomSheetWidget> {
               child: Column(
                 children: [
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 12,
+                    ),
                     decoration: BoxDecoration(
                       color: const Color(0xFFF5F5F5),
                       borderRadius: BorderRadius.circular(30),
@@ -102,13 +102,15 @@ class _ActionBottomSheetWidgetState extends State<ActionBottomSheetWidget> {
                               _ActionButton(
                                 label: 'Improve Writting',
                                 width: buttonWidth,
-                                onTap: () => _handleAction('Improve Writing Selected'),
+                                onTap: () =>
+                                    _handleAction('Improve Writing Selected'),
                               ),
                               const SizedBox(width: 12),
                               _ActionButton(
                                 label: 'Plagiarism Check',
                                 width: buttonWidth,
-                                onTap: () => _handleAction('Plagiarism Check Selected'),
+                                onTap: () =>
+                                    _handleAction('Plagiarism Check Selected'),
                               ),
                             ],
                           ),
@@ -118,13 +120,15 @@ class _ActionBottomSheetWidgetState extends State<ActionBottomSheetWidget> {
                               _ActionButton(
                                 label: 'Regererate',
                                 width: buttonWidth,
-                                onTap: () => _handleAction('Regenerate Selected'),
+                                onTap: () =>
+                                    _handleAction('Regenerate Selected'),
                               ),
                               const SizedBox(width: 12),
                               _ActionButton(
                                 label: 'Add a summary',
                                 width: buttonWidth,
-                                onTap: () => _handleAction('Add Summary Selected'),
+                                onTap: () =>
+                                    _handleAction('Add Summary Selected'),
                               ),
                             ],
                           ),
@@ -134,13 +138,15 @@ class _ActionBottomSheetWidgetState extends State<ActionBottomSheetWidget> {
                               _ActionButton(
                                 label: 'Add a summary',
                                 width: buttonWidth,
-                                onTap: () => _handleAction('Add Summary Selected'),
+                                onTap: () =>
+                                    _handleAction('Add Summary Selected'),
                               ),
                               const SizedBox(width: 12),
                               _ActionButton(
                                 label: 'Add a summary',
                                 width: buttonWidth,
-                                onTap: () => _handleAction('Add Summary Selected'),
+                                onTap: () =>
+                                    _handleAction('Add Summary Selected'),
                               ),
                             ],
                           ),
@@ -227,10 +233,7 @@ class _ActionButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(30),
-          border: Border.all(
-            color: const Color(0xFFE0E0E0),
-            width: 1,
-          ),
+          border: Border.all(color: const Color(0xFFE0E0E0), width: 1),
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,

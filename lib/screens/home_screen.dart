@@ -110,31 +110,28 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Material(
           color: Colors.transparent,
           child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
             decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                colors: [Color(0xFF2196F3), Color(0xFF00BCD4)],
-              ),
-              borderRadius: BorderRadius.circular(16),
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(30),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.2),
+                  color: Colors.black.withOpacity(0.1),
                   blurRadius: 10,
-                  offset: const Offset(0, 4),
+                  offset: const Offset(0, 2),
                 ),
               ],
             ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Icon(CupertinoIcons.sparkles, color: Colors.white),
-                const SizedBox(width: 12),
                 Expanded(
                   child: Text(
                     action,
                     style: const TextStyle(
-                      color: Colors.white,
+                      color: Color(0xFF000000),
                       fontSize: 16,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
                 ),
@@ -152,8 +149,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     });
                   },
                   child: const Icon(
-                    CupertinoIcons.xmark_circle_fill,
-                    color: Colors.white,
+                    CupertinoIcons.xmark,
+                    color: Color(0xFF000000),
+                    size: 20,
                   ),
                 ),
               ],
@@ -164,12 +162,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
 
     Overlay.of(context).insert(_toastEntry!);
-
-    // Auto-dismiss after 5 seconds
-    Future.delayed(const Duration(seconds: 5), () {
-      _toastEntry?.remove();
-      _toastEntry = null;
-    });
   }
 
   @override
