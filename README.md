@@ -1,16 +1,28 @@
-# action_flow
+# Action Flow
 
-A new Flutter project.
+A Flutter app demonstrating text selection and action sheets with a clean, modern UI.
+
+## What it does
+
+Action Flow lets you select text and perform actions on it through an elegant bottom sheet. The app features:
+
+- Text selection with visual highlighting
+- Bottom sheet with customizable actions
+- Toast notifications for user feedback
+- Clean Material 3 design with Inter font
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+```bash
+# Install dependencies
+flutter pub get
 
-A few resources to get you started if this is your first Flutter project:
+# Run the app
+flutter run
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Built With
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter 3.x
+- Material 3
+- Google Fonts
